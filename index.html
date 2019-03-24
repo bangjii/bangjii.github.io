@@ -1,21 +1,19 @@
 <html>
 <head>
 <style>
-  .parent {
-      height: 200px;
-      width: 400px;
-      background: lightgray;
-      text-align: center;
-  }
-
-  .parent > .child {
-      line-height: 200px;
-  }
+.parent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
 </style>
 </head>
 <body>
 <div class="parent">
-    <span class="child">I'm vertically/horizontally centered!</span>
+    <span>Belonan Jadi Broh!</span>
 </div>
 </body>
 </html>
