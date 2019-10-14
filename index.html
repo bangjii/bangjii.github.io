@@ -59,9 +59,9 @@
   <!-- Header -->
   <header class="masthead">
     <div class="container">
-      <div class="intro-text">
+      <div class="intro-text text-center">
         <div class="intro-lead-in" style="color:green;display:inline;background-color:rgba(242, 244, 244,0.5);">&nbsp;Assalamualaikum!&nbsp;</div>
-        <div class="intro-heading text-uppercase">Welcome to Hudzaifah's Page</div>
+        <div class="intro-heading text-uppercase">Welcome to My Portfolio</div>
         <!--<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Read More...</a>-->
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#experiance">Read More...</a>
       </div>
@@ -295,8 +295,23 @@
         <div class="col-sm-4">
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Hudzaifah Al Jihad</h4>
+            <h4>Hudzaifah Al Jihad</h4>            
             <p class="text-muted">Microcontroller & Backend Developer</p>
+            <p class="text-muted" style="text-align:left">
+              <i class="fa fa-map"></i>&nbsp;&nbsp;
+              <a href="https://www.google.com/maps/place/6%C2%B026'12.5%22S+107%C2%B000'15.8%22E/@-6.427562,106.9560658,13z/data=!4m13!1m6!3m5!1s0x2e6995032091cbc5:0x9ac04d2784b2bc1a!2sPuri+Harmoni+6!8m2!3d-6.4363243!4d107.005348!3m5!1s0x2e6995e07a6a7281:0x4847460cba431e2a!7e2!8m2!3d-6.4367981!4d107.0043995" target="_blank">
+                Puri Harmoni 6 Blok A9 No 22 Cileungsi, Jawa Barat 16820.
+              </a><br/>
+              <i class="fa fa-university"></i>&nbsp;&nbsp;
+              <a href="http://unkris.ac.id/">
+                Krisnadwipayana University, B.Tech(IT).
+              </a><br/>
+              <i class="fa fa fa-phone"></i>&nbsp;&nbsp;
+              +62 899-8933-521<br/>
+              <i class="fa fa-envelope"></i>&nbsp;&nbsp;
+              al.ghifari22@gmail.com
+            </p>
+            
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="https://github.com/bangjii">
@@ -313,6 +328,11 @@
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
+              <li class="list-inline-item">
+	            <a href="https://api.whatsapp.com/send?phone=628998933521&text=Hay%20Hudzaifah%20tell%20me%20more%20about%20your%20skill">
+	              <i class="fab fa-whatsapp"></i>
+	            </a>
+	          </li>
             </ul>
           </div>
         </div>
@@ -401,8 +421,15 @@
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
-                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" onclick="//sendGmail();">Send Message</button>       
-                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" onclick="window.open('https://api.whatsapp.com/send?phone=628998933521&text=Hay%20Hudzaifah%20tell%20me%20more%20about%20your%20skill');">Send WhatsApp</button>
+               	<div class="row">
+               		<div class="col-sm-5">
+               			<button id="sendMessageButton" class="btn btn-primary btn-xl btn-block text-uppercase" type="submit" onclick="sendGmail();">Send Message</button>
+               		</div>
+                  <div class="col-sm-2 text-center"><h3 style="color:white;">OR</h3></div>
+               		<div class="col-sm-5">       
+                		<button id="sendMessageButton" class="btn btn-primary btn-xl btn-block text-uppercase" type="submit" onclick="sendWhatsapp();">Send WhatsApp</button>
+                	</div>
+               	</div>                
               </div>
             </div>
           </form>
@@ -433,6 +460,11 @@
             <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/hudzaifah-al-jihad-b0162540/">
                 <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?phone=628998933521&text=Hay%20Hudzaifah%20tell%20me%20more%20about%20your%20skill">
+                <i class="fab fa-whatsapp"></i>
               </a>
             </li>
           </ul>
@@ -681,9 +713,16 @@
 			var mTo = "https://mail.google.com/mail/?view=cm&fs=1&to=al.ghifari22@gmail.com&su=Hello%20from%20" + gName + "%20[guess github web]&body=" + gMsg + "%0A%0ARegards,%0A%0AName:%20" + gName + "%0AEmail:%20" + gEmail + "%0APhone:%20" + gPhone + "%0A";
   			window.open(mTo, "_blank");
 		}
-		else {
-			window.alert("kosong!");
-		}
+  	}
+  	function sendWhatsapp(){
+  		var gName = document.getElementById("name").value;
+		var gEmail = document.getElementById("email").value;
+		var gPhone = document.getElementById("phone").value;
+		var gMsg = document.getElementById("message").value;
+		if (gMsg != "" && gName != "" && gPhone != "" && gEmail != ""){
+			gMsg = encodeURIComponent(gMsg.trim());
+  			window.open('https://api.whatsapp.com/send?phone=628998933521&text=' + gMsg + '%0A%0AFrom:%0A%0A' + gName + '%20[' + gEmail + '%20(' + gPhone + ')]');
+		}		
   	}
   </script>
 </body>
