@@ -1,14 +1,15 @@
 # bangjii.github.io
 Hudzaifah GitHub web profile.
+Click to see live preview https://bangjii.github.io
 
 ##How To Git
 
 1. Bikin repository baru dan initialize dengan file README.md
 2. Clone:
 	- cd \to\directory
-	- git clone https://github.com/bangjii/apaantuh.git
+	- git clone https://github*com/bangjii/apaantuh*git
 3. Make some change, update, adding, deleting etc in local file.
-4. git remote add origin https://github.com/bangjii/apaantuh.git
+4. git remote add origin https://github*com/bangjii/apaantuh*git
 5. git pull origin master
 6. git commit -m "your notes"
 7. git push origin master
