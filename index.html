@@ -66,6 +66,8 @@
       <div class="intro-text text-center">
         <div class="intro-lead-in" style="color:green;display:inline;background-color:rgba(242, 244, 244,0.5);">&nbsp;Assalamualaikum!&nbsp;</div>
         <div class="intro-heading text-uppercase">Welcome to My Portfolio</div>
+	<h4>I usually working</h4>
+	<h2>with <span id="anim"></span></h2>
 	<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Read More...</a>
       </div>
     </div>
@@ -828,7 +830,17 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
+  <script src="js/typed.js"></script>
+
   <script>
+	var typed = new Typed('#anim', {
+		strings: ["Arduino.", "Raspberry Pi.", "ESP8266.", "HTML.", "Javascript.", "PHP.", "C/C++.", "NodeJS.", "MySQL."],
+			typeSpeed: 80,
+			loop: true,
+			startDelay: 500,
+			backSpeed: 40,
+			smartBackspace: false
+    	});
   	function sendGmail(){
   		var gName = document.getElementById("name").value;
 		var gEmail = document.getElementById("email").value;
