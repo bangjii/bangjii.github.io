@@ -852,6 +852,9 @@
 			var mTo = "https://mail.google.com/mail/?view=cm&fs=1&to=al.ghifari22@gmail.com&su=Hello%20from%20" + gName + "%20[guess github web]&body=" + gMsg + "%0A%0ARegards,%0A%0AName:%20" + gName + "%0AEmail:%20" + gEmail + "%0APhone:%20" + gPhone + "%0A";
   			window.open(mTo, "_blank");
 		}
+		else {
+			alert("kosong!!");	
+		}
   	}
   	function sendWhatsapp(){
   		var gName = document.getElementById("name").value;
@@ -861,7 +864,10 @@
 		if (gMsg != "" && gName != "" && gPhone != "" && gEmail != ""){
 			gMsg = encodeURIComponent(gMsg.trim());
   			window.open('https://api.whatsapp.com/send?phone=6281295913898&text=' + gMsg + '%0A%0AFrom:%0A%0A' + gName + '%20[' + gEmail + '%20(' + gPhone + ')]');
-		}		
+		}
+		else {
+			alert("kosong!!");	
+		}
   	}
   </script>
 </body>
