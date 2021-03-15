@@ -1,0 +1,32 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Undangan Pernikahan Kami. Helna Apriani dan Hudzaifah Al Jihad.">
+	<meta name="author" content="bangjii">
+</head>
+
+<body>
+	<script>
+		
+		localStorage.clear(); 
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		var url_string = window.location.href;
+		var url = new URL(url_string);
+		var to = url.searchParams.get("kepada");
+		if(to == null || to == "") {
+			to = "Teman";
+		}
+		localStorage.setItem("tamu", to);
+		console.log(to);
+		
+		if (!isMobile) {
+			console.log("web nihh!!");
+			window.location.replace("./desktop.html");
+		} else {
+			console.log("mobile nihh!!");
+			window.location.replace("./surat.html");
+		}	
+		
+	</script>
+</body>
+</html>

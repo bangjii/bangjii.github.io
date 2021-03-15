@@ -1,0 +1,61 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Welcome</title>
+	<link href="css/amplop.css" rel="stylesheet">
+	<style>
+		@font-face {
+			font-family: 'photograph_signature';
+			src: url('./fonts/signature-webfont.woff2') format('woff2'),
+				 url('./fonts/signature-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}		
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div>
+			<div>
+				<center>
+				<p style='font-family: "photograph_signature"; font-size: 32px; color: #ad854c;' id="tamu">Hay Teman Kamu Mendapatkan Undangan</p>
+				</center>
+			</div>
+			<div>
+				<center>
+				<div class="card">
+				  <div class="heart" id="heart"></div>
+				</div>
+				</center>
+			</div>
+			<div>
+				<center>
+					<p style='color: #ad854c;'>Tap Hati Untuk Membuka Undangan.</p>
+				</center>
+			</div>
+		</div>
+	</div>
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script>	
+		var listTamu = ["Teman Gibah", "Teman Kantor", "Teman Sekolah", "Anak Amazone", "FP2STI", "Sohibul Rimayah", "SiBunder", "PH6"];		
+		var to = localStorage.getItem("tamu");
+		if( to == "" || to == null ) {
+			to = "Teman";
+		}	
+		console.log(to);
+		document.getElementById("tamu").innerHTML = 'Hay "<b>' + to + '</b>"</br>Kamu Mendapatkan Undangan.';
+		localStorage.clear(); 
+		$('#heart').click(function() {
+			toHome();
+		});
+		function toHome(){
+			$("html").fadeOut(function () {
+				location = "./undangan.html";
+			});
+		}
+	</script>
+</body>
+</html>
