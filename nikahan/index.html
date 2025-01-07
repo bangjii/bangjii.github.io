@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Nikahan BangJii" />
+    <meta property="og:description" content="Doain yak biar semuanya mudah lancar dan berkah aamiin" />
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2018/02/11/15/15/ubuntu-3145957_1280.png" />    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>invitation</title>
+    <script>
+        // Check URL parameter before page load
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramValue = urlParams.get('qry');
+            function cekTamu(namaTamu){
+                var cek = 0;
+                const listTamu = [
+                    "Abdul Hamid",
+                    "Eko Widodo",
+                    "Satriyo Bimo",
+                    "Luri Darmawan",
+                    "Taufan Prasetyo",
+                    "Deni Kasep",
+                    "Sifu Martin",
+                    "Edo",
+                    "Aci",
+                    "Slamet"
+                ];
+                
+                for (var t = 0; t < listTamu.length; t++){
+                    if (namaTamu == (listTamu[t])){
+                        cek += 1;
+                    }
+                }
+                return cek;
+            }
+            if (!paramValue) {
+                window.location.replace("https://food.detik.com/sayur/d-5709621/resep-semur-jengkol-betawi-yang-legit-gurih-bumbunya");
+            } else {
+                var teman = atob(paramValue);
+                if (cekTamu(teman) < 1){
+                    window.location.replace("https://food.detik.com/sayur/d-5709621/resep-semur-jengkol-betawi-yang-legit-gurih-bumbunya");
+                }
+            }
+        })();
+    </script>
+</head>
+<body>  
+    <div class="window">  
+        <div class="window_header">
+            <div class="window_title">You are invited</div>
+            <div class="window_close_button"></div>
+            <div class="window_maximize_button"></div>
+            <div class="window_minimize_button"></div>
+        </div>
+        <div class="window_content">
+        Walimatul Ursy<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__.__.__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .__<br>
+&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;|__| &nbsp;|__ _____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__| |<br>
+&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;| &nbsp;| &nbsp;| &nbsp;\\__ &nbsp;\&nbsp;&nbsp;&nbsp;/ __ |<br>
+/\__| &nbsp;| &nbsp;|&nbsp;&nbsp;&nbsp;Y &nbsp;\/ __ \_/ /_/ |<br>
+\______|__|___| &nbsp;(____ &nbsp;/\____ |<br>
+______&nbsp;&nbsp;.__.__<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\ |__|&nbsp;&nbsp;| _____<br>
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;\|&nbsp;&nbsp;|&nbsp;&nbsp;| \__&nbsp;&nbsp;\<br>
+|&nbsp;&nbsp;&nbsp;`&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;|&nbsp;&nbsp;|__/ __ \_<br>
+/_____&nbsp;&nbsp;/__|____(____&nbsp;&nbsp;/<br><br>
+            <b>bangjii@pojokan:~$</b><b id="typingDiv">&nbsp;</b> <span class="blink">_</span><br>  
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="list.js"></script>
+</body>
+</html>
